@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Control Horas Juan</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="icon.png" class="logo" alt="logo">
+    <div>
+      <h1>Control Horas Juan</h1>
+      <p class="subtitle">Registra tu jornada y calcula horas extra al instante</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="entry">
+      <div class="row">
+        <label>Fecha</label>
+        <input type="date" id="date" />
+      </div>
+
+      <div class="row split">
+        <div>
+          <label>Entrada mañana</label>
+          <input type="time" id="in_morning" />
+        </div>
+        <div>
+          <label>Salida mañana</label>
+          <input type="time" id="out_morning" />
+        </div>
+      </div>
+
+      <div class="row split">
+        <div>
+          <label>Entrada tarde</label>
+          <input type="time" id="in_afternoon" />
+        </div>
+        <div>
+          <label>Salida tarde</label>
+          <input type="time" id="out_afternoon" />
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Comentarios / Obra</label>
+        <input type="text" id="notes" placeholder="Obra, cliente o nota breve" />
+      </div>
+
+      <div class="row actions">
+        <button id="saveBtn" class="btn primary">Guardar día</button>
+        <button id="clearBtn" class="btn ghost">Limpiar campos</button>
+      </div>
+
+      <div class="calc">
+        <div><strong>Total horas:</strong> <span id="total_hours">--</span></div>
+        <div><strong>Horas extra (diarias):</strong> <span id="extra_hours">--</span></div>
+      </div>
+    </section>
+
+    <section class="table">
+      <div class="table-header">
+        <h2>Registros</h2>
+        <div class="export-row">
+          <label>Mes:</label>
+          <input type="month" id="export_month" />
+          <button id="exportBtn" class="btn primary">Exportar Excel (.xlsx)</button>
+          <button id="deleteAll" class="btn danger">Borrar todos</button>
+        </div>
+      </div>
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>Fecha</th><th>Entrada m</th><th>Salida m</th><th>Entrada t</th><th>Salida t</th><th>Total</th><th>Extra</th><th>Obra/Nota</th><th>Acción</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Jornada base diaria: <strong>8h</strong> · App PWA creada para Juan — diseño moderno y visual
+  </footer>
+
+  <script src="xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
