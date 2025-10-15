@@ -1,93 +1,643 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Control Horas Juan</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icon.png">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Control Horas">
+    <title>Control Horas Juan v2</title>
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiQ29udHJvbCBIb3JhcyBKdWFuIHYyIiwic2hvcnRfbmFtZSI6IkNvbnRyb2wgSG9yYXMiLCJzdGFydF91cmwiOiIuIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBmMTcyYSIsInRoZW1lX2NvbG9yIjoiIzEwYjk4MSIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBeE1UY2dNVEUzSWo0OFpHVm1jejQ4YkdsdVpXRnlSM0poWkdsbGJuUWdhV1E5SW1jaUlqNDhjM1J2Y0NCdlptWnpaWFE5SWpBbElpQnpkRzl3TFdOdmJHOXlQU0lqTVRCaU9UZ3hJaTgrUEhOMGIzQWdiMlptYzJWMFBTSXhNREFsSWlCemRHOXdMV052Ykc5eVBTSXdabVl3Wm1ZeUlpOCtQQzlzYVc1bFlYSkhjbUZrYVdWdWRENDhMMlJsWm5NK1BISmxZM1FnZUQwaU1DSWdlVDBpTUNJZ2QybGtkR2c5SWpFeE55SWdhR1ZwWjJoMFBTSXhNVGNpSUhKNFBTSXlOQ0lnWm1sc2JEMGlkWEpzS0NObktTSXZQanh3WVhSb0lHUTlJazAwT0M0MUlEVTRMalVqYkRjdU5TQTNMalVqYXkweUxqVWdNeTQwSXpwTk16Y2dORFl1TlNObklEUXVOU0EwTGpVZ05DNDFJRFF1TlNBMElIWXRNakF1TlNCallUSWdNaUF3SURBZ01DMHlMVElqYURJd0xtVWpZVEVnTVNBd0lEQWdNUzB4SURBdE1UUmpNQzB4TGpFdExqY3RNaTB5TFRJaklDMHhMak10TVM0eUxUSXROUzB5STJndExqVmpMUzR4SURBdExqTXRMakV0TGpNdExqRWpkakl5TGpVallURWdNU0F3SURBZ01TQXhJRFVqU0RRd0xtVWpZVFFnTkNBd0lEQWdOQzAwSURNM0lpQnpkSEp2YTJVOUlpTXhNR0k1T0RFaUlITjBjbTlyWlMxM2FXUjBhRDBpTWlJZ1ptbHNiRDBpYm05dVpTSXZQanh3WVhSb0lHUTlJazAwT0M0MUlEWTNMalVqYkRjdU5TQTNMalVqYXkweUxqVWdNeTQwSXpwTk16Y2dOVFV1TlNObklEUXVOU0EwTGpVZ05DNDFJRFF1TlNBMElIWXRNakF1TlNCallUSWdNaUF3SURBZ01DMHlMVElqYURJd0xtVWpZVEVnTVNBd0lEQWdNUzB4SURBdE1UUmpNQzB4TGpFdExqY3RNaTB5TFRJaklDMHhMak10TVM0eUxUSXROUzB5STJndExqVmpMUzR4SURBdExqTXRMakV0TGpNdExqRWpkakl5TGpVallURWdNU0F3SURBZ01TQXhJRFVqU0RRd0xtVWpZVFFnTkNBd0lEQWdOQzAwSURNM0lpQnpkSEp2YTJVOUlpTXhNR0k1T0RFaUlITjBjbTlyWlMxM2FXUjBhRDBpTWlJZ1ptbHNiRDBpYm05dVpTSXZQanh3WVhSb0lHUTlJazAxT0NBMk9DNHhJM1l4T1NBdE55NDFZeTQwSURBZ0xqZ3RMak1nTVM0eExTNDJJeTQwTFM0MElDNDNMUzQ0SURFdExqZ2pNUzQxTFRFdU55QXlMall0TWk0MElETXVOUzB5TGpRajF5QXVPUzB4TGpVZ01TNHpMUzR5SURFdU9Db3pJQzR6SXk0eElDNDJJQzQwSURFZ0xqWWdNUzQwSXk0eElDNDFJQzQwSURFZ0xqWWdNUzR5SWk=",InR5cGUiOiJpbWFnZS9zdmcreG1sIiwic2l6ZXMiOiJhbnkifV19">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #f1f5f9;
+        min-height: 100vh;
+        padding: 20px;
+        padding-bottom: 100px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #10b981, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 8px;
+    }
+
+    .date-display {
+        font-size: 14px;
+        color: #94a3b8;
+    }
+
+    .card {
+        background: rgba(30, 41, 59, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 24px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .session-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .session-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .morning {
+        background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    }
+
+    .afternoon {
+        background: linear-gradient(135deg, #06b6d4, #0284c7);
+    }
+
+    .session-title {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .timer {
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        margin: 20px 0;
+        font-variant-numeric: tabular-nums;
+        color: #10b981;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    button {
+        padding: 16px;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-family: inherit;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+    }
+
+    .btn-primary:active {
+        transform: scale(0.95);
+    }
+
+    .btn-secondary {
+        background: rgba(71, 85, 105, 0.5);
+        color: #cbd5e1;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .btn-secondary:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    .summary {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
+        border-radius: 16px;
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .summary-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .summary-row:last-child {
+        border-bottom: none;
+    }
+
+    .summary-label {
+        color: #94a3b8;
+    }
+
+    .summary-value {
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .extra-positive {
+        color: #10b981;
+    }
+
+    .extra-negative {
+        color: #ef4444;
+    }
+
+    .tabs {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .tab {
+        flex: 1;
+        padding: 12px;
+        background: rgba(71, 85, 105, 0.3);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 12px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .tab.active {
+        background: linear-gradient(135deg, #10b981, #059669);
+        border-color: #10b981;
+    }
+
+    .history-item {
+        background: rgba(71, 85, 105, 0.3);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
+    .history-date {
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .history-times {
+        font-size: 14px;
+        color: #94a3b8;
+        line-height: 1.6;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .modal.active {
+        display: flex;
+    }
+
+    .modal-content {
+        background: #1e293b;
+        border-radius: 20px;
+        padding: 24px;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .modal-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    input[type="date"], input[type="time"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        background: rgba(71, 85, 105, 0.5);
+        color: #f1f5f9;
+        font-size: 16px;
+        margin-bottom: 16px;
+        font-family: inherit;
+    }
+
+    .modal-buttons {
+        display: flex;
+        gap: 12px;
+    }
+
+    .btn-full {
+        grid-column: 1 / -1;
+    }
+
+    @media (max-width: 480px) {
+        .timer {
+            font-size: 36px;
+        }
+        
+        h1 {
+            font-size: 24px;
+        }
+    }
+</style>
+```
+
 </head>
 <body>
-  <header class="app-header">
-    <img src="icon.png" class="logo" alt="logo">
-    <div>
-      <h1>Control Horas Juan</h1>
-      <p class="subtitle">Registra tu jornada y calcula horas extra al instante</p>
+    <div class="container">
+        <header>
+            <h1>⏱️ Control Horas Juan</h1>
+            <div class="date-display" id="currentDate"></div>
+        </header>
+
+```
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('fichaje')">Fichaje</div>
+        <div class="tab" onclick="switchTab('historial')">Historial</div>
     </div>
-  </header>
 
-  <main class="container">
-    <section class="entry">
-      <div class="row">
-        <label>Fecha</label>
-        <input type="date" id="date" />
-      </div>
-
-      <div class="row split">
-        <div>
-          <label>Entrada mañana</label>
-          <input type="time" id="in_morning" />
+    <div id="fichajeTab">
+        <!-- Sesión Mañana -->
+        <div class="card">
+            <div class="session-header">
+                <div class="session-icon morning">🌅</div>
+                <div class="session-title">Mañana</div>
+            </div>
+            <div class="timer" id="morningTimer">00:00:00</div>
+            <div class="buttons">
+                <button class="btn-primary" onclick="fichar('morningIn')">Entrada</button>
+                <button class="btn-secondary" onclick="fichar('morningOut')" id="morningOutBtn" disabled>Salida</button>
+            </div>
         </div>
-        <div>
-          <label>Salida mañana</label>
-          <input type="time" id="out_morning" />
+
+        <!-- Sesión Tarde -->
+        <div class="card">
+            <div class="session-header">
+                <div class="session-icon afternoon">🌆</div>
+                <div class="session-title">Tarde</div>
+            </div>
+            <div class="timer" id="afternoonTimer">00:00:00</div>
+            <div class="buttons">
+                <button class="btn-primary" onclick="fichar('afternoonIn')" id="afternoonInBtn" disabled>Entrada</button>
+                <button class="btn-secondary" onclick="fichar('afternoonOut')" id="afternoonOutBtn" disabled>Salida</button>
+            </div>
         </div>
-      </div>
 
-      <div class="row split">
-        <div>
-          <label>Entrada tarde</label>
-          <input type="time" id="in_afternoon" />
+        <!-- Resumen -->
+        <div class="summary">
+            <div class="summary-title">📊 Resumen del Día</div>
+            <div class="summary-row">
+                <span class="summary-label">Total trabajado:</span>
+                <span class="summary-value" id="totalWorked">00:00:00</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Horas extra (base 8h):</span>
+                <span class="summary-value" id="extraHours">00:00:00</span>
+            </div>
         </div>
-        <div>
-          <label>Salida tarde</label>
-          <input type="time" id="out_afternoon" />
+    </div>
+
+    <div id="historialTab" style="display: none;">
+        <div class="card">
+            <button class="btn-primary btn-full" onclick="exportToExcel()">📥 Exportar a Excel</button>
         </div>
-      </div>
+        <div id="historyList"></div>
+    </div>
+</div>
 
-      <div class="row">
-        <label>Comentarios / Obra</label>
-        <input type="text" id="notes" placeholder="Obra, cliente o nota breve" />
-      </div>
-
-      <div class="row actions">
-        <button id="saveBtn" class="btn primary">Guardar día</button>
-        <button id="clearBtn" class="btn ghost">Limpiar campos</button>
-      </div>
-
-      <div class="calc">
-        <div><strong>Total horas:</strong> <span id="total_hours">--</span></div>
-        <div><strong>Horas extra (diarias):</strong> <span id="extra_hours">--</span></div>
-      </div>
-    </section>
-
-    <section class="table">
-      <div class="table-header">
-        <h2>Registros</h2>
-        <div class="export-row">
-          <label>Mes:</label>
-          <input type="month" id="export_month" />
-          <button id="exportBtn" class="btn primary">Exportar Excel (.xlsx)</button>
-          <button id="deleteAll" class="btn danger">Borrar todos</button>
+<!-- Modal para elegir fecha/hora -->
+<div class="modal" id="dateModal">
+    <div class="modal-content">
+        <div class="modal-title">Elegir fecha y hora</div>
+        <input type="date" id="customDate">
+        <input type="time" id="customTime">
+        <div class="modal-buttons">
+            <button class="btn-secondary" style="flex: 1" onclick="closeModal()">Cancelar</button>
+            <button class="btn-primary" style="flex: 1" onclick="confirmCustomDateTime()">Confirmar</button>
         </div>
-      </div>
-      <table id="recordsTable">
-        <thead>
-          <tr>
-            <th>Fecha</th><th>Entrada m</th><th>Salida m</th><th>Entrada t</th><th>Salida t</th><th>Total</th><th>Extra</th><th>Obra/Nota</th><th>Acción</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-  </main>
+    </div>
+</div>
 
-  <footer class="footer">
-    Jornada base diaria: <strong>8h</strong> · App PWA creada para Juan — diseño moderno y visual
-  </footer>
+<script>
+    let state = {
+        morningIn: null,
+        morningOut: null,
+        afternoonIn: null,
+        afternoonOut: null,
+        morningInterval: null,
+        afternoonInterval: null,
+        pendingAction: null
+    };
 
-  <script src="xlsx.full.min.js"></script>
-  <script src="app.js"></script>
+    let history = [];
+
+    function loadData() {
+        const saved = localStorage.getItem('controlHorasState');
+        if (saved) {
+            const data = JSON.parse(saved);
+            const today = new Date().toLocaleDateString('es-ES');
+            if (data.date === today) {
+                state = {...state, ...data};
+            }
+        }
+
+        const savedHistory = localStorage.getItem('controlHorasHistory');
+        if (savedHistory) {
+            history = JSON.parse(savedHistory);
+        }
+
+        updateUI();
+    }
+
+    function saveData() {
+        const dataToSave = {
+            ...state,
+            date: new Date().toLocaleDateString('es-ES')
+        };
+        localStorage.setItem('controlHorasState', JSON.stringify(dataToSave));
+    }
+
+    function saveHistory() {
+        localStorage.setItem('controlHorasHistory', JSON.stringify(history));
+    }
+
+    function updateCurrentDate() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('currentDate').textContent = now.toLocaleDateString('es-ES', options);
+    }
+
+    function formatTime(ms) {
+        const totalSeconds = Math.floor(ms / 1000);
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function updateTimer(session) {
+        const startKey = `${session}In`;
+        const timerEl = document.getElementById(`${session}Timer`);
+        
+        if (state[startKey]) {
+            const start = new Date(state[startKey]);
+            const now = new Date();
+            const diff = now - start;
+            timerEl.textContent = formatTime(diff);
+        }
+    }
+
+    function startTimer(session) {
+        const intervalKey = `${session}Interval`;
+        if (state[intervalKey]) clearInterval(state[intervalKey]);
+        
+        state[intervalKey] = setInterval(() => {
+            updateTimer(session);
+            updateSummary();
+        }, 1000);
+    }
+
+    function stopTimer(session) {
+        const intervalKey = `${session}Interval`;
+        if (state[intervalKey]) {
+            clearInterval(state[intervalKey]);
+            state[intervalKey] = null;
+        }
+    }
+
+    function fichar(action) {
+        state.pendingAction = action;
+        const now = new Date();
+        document.getElementById('customDate').value = now.toISOString().split('T')[0];
+        document.getElementById('customTime').value = now.toTimeString().slice(0, 5);
+        document.getElementById('dateModal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('dateModal').classList.remove('active');
+        state.pendingAction = null;
+    }
+
+    function confirmCustomDateTime() {
+        const date = document.getElementById('customDate').value;
+        const time = document.getElementById('customTime').value;
+        const datetime = new Date(`${date}T${time}`);
+        
+        processFichaje(state.pendingAction, datetime);
+        closeModal();
+    }
+
+    function processFichaje(action, datetime) {
+        state[action] = datetime.toISOString();
+        
+        if (action === 'morningIn') {
+            startTimer('morning');
+        } else if (action === 'morningOut') {
+            stopTimer('morning');
+            document.getElementById('morningTimer').textContent = '00:00:00';
+        } else if (action === 'afternoonIn') {
+            startTimer('afternoon');
+        } else if (action === 'afternoonOut') {
+            stopTimer('afternoon');
+            document.getElementById('afternoonTimer').textContent = '00:00:00';
+            saveToHistory();
+        }
+        
+        saveData();
+        updateUI();
+    }
+
+    function saveToHistory() {
+        if (state.morningIn && state.morningOut && state.afternoonIn && state.afternoonOut) {
+            const entry = {
+                date: new Date().toLocaleDateString('es-ES'),
+                morningIn: state.morningIn,
+                morningOut: state.morningOut,
+                afternoonIn: state.afternoonIn,
+                afternoonOut: state.afternoonOut
+            };
+            
+            history.push(entry);
+            saveHistory();
+            
+            state = {
+                morningIn: null,
+                morningOut: null,
+                afternoonIn: null,
+                afternoonOut: null,
+                morningInterval: null,
+                afternoonInterval: null,
+                pendingAction: null
+            };
+            saveData();
+            updateHistoryList();
+        }
+    }
+
+    function updateUI() {
+        const morningOutBtn = document.getElementById('morningOutBtn');
+        const afternoonInBtn = document.getElementById('afternoonInBtn');
+        const afternoonOutBtn = document.getElementById('afternoonOutBtn');
+        
+        morningOutBtn.disabled = !state.morningIn || state.morningOut;
+        afternoonInBtn.disabled = !state.morningOut || state.afternoonIn;
+        afternoonOutBtn.disabled = !state.afternoonIn || state.afternoonOut;
+        
+        if (state.morningIn && !state.morningOut) {
+            startTimer('morning');
+        }
+        
+        if (state.afternoonIn && !state.afternoonOut) {
+            startTimer('afternoon');
+        }
+        
+        updateSummary();
+    }
+
+    function updateSummary() {
+        let totalMs = 0;
+        
+        if (state.morningIn && state.morningOut) {
+            totalMs += new Date(state.morningOut) - new Date(state.morningIn);
+        } else if (state.morningIn) {
+            totalMs += new Date() - new Date(state.morningIn);
+        }
+        
+        if (state.afternoonIn && state.afternoonOut) {
+            totalMs += new Date(state.afternoonOut) - new Date(state.afternoonIn);
+        } else if (state.afternoonIn) {
+            totalMs += new Date() - new Date(state.afternoonIn);
+        }
+        
+        document.getElementById('totalWorked').textContent = formatTime(totalMs);
+        
+        const eightHoursMs = 8 * 60 * 60 * 1000;
+        const extraMs = totalMs - eightHoursMs;
+        const extraEl = document.getElementById('extraHours');
+        
+        if (extraMs > 0) {
+            extraEl.textContent = '+' + formatTime(extraMs);
+            extraEl.className = 'summary-value extra-positive';
+        } else {
+            extraEl.textContent = formatTime(Math.abs(extraMs));
+            extraEl.className = 'summary-value extra-negative';
+        }
+    }
+
+    function switchTab(tab) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        if (tab === 'fichaje') {
+            document.getElementById('fichajeTab').style.display = 'block';
+            document.getElementById('historialTab').style.display = 'none';
+        } else {
+            document.getElementById('fichajeTab').style.display = 'none';
+            document.getElementById('historialTab').style.display = 'block';
+            updateHistoryList();
+        }
+    }
+
+    function updateHistoryList() {
+        const list = document.getElementById('historyList');
+        if (history.length === 0) {
+            list.innerHTML = '<div class="card" style="text-align: center; color: #94a3b8;">No hay registros todavía</div>';
+            return;
+        }
+        
+        list.innerHTML = history.slice().reverse().map(entry => {
+            const morningDuration = new Date(entry.morningOut) - new Date(entry.morningIn);
+            const afternoonDuration = new Date(entry.afternoonOut) - new Date(entry.afternoonIn);
+            const total = morningDuration + afternoonDuration;
+            
+            return `
+                <div class="history-item">
+                    <div class="history-date">${entry.date}</div>
+                    <div class="history-times">
+                        🌅 ${new Date(entry.morningIn).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'})} - ${new Date(entry.morningOut).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'})}<br>
+                        🌆 ${new Date(entry.afternoonIn).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'})} - ${new Date(entry.afternoonOut).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'})}<br>
+                        <strong>Total: ${formatTime(total)}</strong>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function exportToExcel() {
+        if (history.length === 0) {
+            alert('No hay datos para exportar');
+            return;
+        }
+        
+        const data = history.map(entry => {
+            const morningDuration = new Date(entry.morningOut) - new Date(entry.morningIn);
+            const afternoonDuration = new Date(entry.afternoonOut) - new Date(entry.afternoonIn);
+            const total = morningDuration + afternoonDuration;
+            
+            return {
+                'Fecha': entry.date,
+                'Entrada Mañana': new Date(entry.morningIn).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'}),
+                'Salida Mañana': new Date(entry.morningOut).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'}),
+                'Entrada Tarde': new Date(entry.afternoonIn).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'}),
+                'Salida Tarde': new Date(entry.afternoonOut).toLocaleTimeString('es-ES', {hour: '2-digit', minute: '2-digit'}),
+                'Total Horas': formatTime(total)
+            };
+        });
+        
+        const ws = XLSX.utils.json_to_sheet(data);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Horas Trabajadas");
+        
+        const month = new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long' });
+        XLSX.writeFile(wb, `Control_Horas_${month}.xlsx`);
+    }
+
+    updateCurrentDate();
+    loadData();
+    setInterval(updateCurrentDate, 60000);
+</script>
+```
+
 </body>
 </html>
