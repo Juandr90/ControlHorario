@@ -556,12 +556,12 @@
         const extraMs = totalMs - eightHoursMs;
         const extraEl = document.getElementById('extraHours');
         
-        if (extraMs > 0) {
+        if (totalMs >= eightHoursMs) {
             extraEl.textContent = '+' + formatTime(extraMs);
             extraEl.className = 'summary-value extra-positive';
         } else {
-            extraEl.textContent = formatTime(Math.abs(extraMs));
-            extraEl.className = 'summary-value extra-negative';
+            extraEl.textContent = '00:00:00';
+            extraEl.className = 'summary-value';
         }
     }
 
